@@ -13,6 +13,10 @@ namespace ClassLibrary
     /// </summary>
     public class Train
     {
+        public Train(string name){ //Metodo constructor que ademas suma 1 a la variable instancias
+            this.setId(name);
+            instancias++;
+        }
         /// <summary>
         /// Obtiene un valor que indica si las maquinas del tren han sido encendidas o no.
         /// </summary>
@@ -56,5 +60,24 @@ namespace ClassLibrary
             Console.Write("The engines are already stopped");
             return this.IsEngineStarted;
         }
+        private static int instancias = 0; //Variable de clase que cuenta la cnatidad de trenes creados
+        public int getInstancias(){ //Metodos get y set de la variable instancias
+            return instancias;
+        }
+        public void setInstancias(int nueva){
+            instancias = nueva;
+        }
+        private string id; //Variable de instancia para identificar cada tren
+        public string getId(){ //Metodos get y set para la variable id
+            return this.id;
+        }
+        public void setId(string nuevaid){
+            id = nuevaid;
+        }
+        
+        ~Train(){ //Metodo destructor de la clase Train
+            instancias--;
+        }
+
     }
-}
+}            

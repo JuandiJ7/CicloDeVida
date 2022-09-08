@@ -14,14 +14,18 @@ namespace ConsoleApplication
     /// </summary>
     public static class Program
     {
-        /// <summary>
-        /// Punto de entrada al programa principal.
-        /// </summary>
         public static void Main()
         {
-            var train = new Train();
-            train.StartEngines();
-            Console.WriteLine("Hello World!");
+            for (int i = 1; i <= 100;i++){
+                var j = new Train(i.ToString()); //actividad 7
+                Console.WriteLine(j.getInstancias());
+            }
+
+            var t1 = new Train("Last Train To London");
+            var t2 = new Train("Last Train To London"); //actividad 8
+            var t3 = new Train("Runaway Train");
+            
         }
+        
     }
 }
