@@ -14,7 +14,7 @@ namespace ClassLibrary
     public class Train
     {
         public Train(string name){ //Metodo constructor que ademas suma 1 a la variable instancias
-            this.setId(name);
+            this.SetId(name);
             instancias++;
         }
         /// <summary>
@@ -61,17 +61,17 @@ namespace ClassLibrary
             return this.IsEngineStarted;
         }
         private static int instancias = 0; //Variable de clase que cuenta la cnatidad de trenes creados
-        public static int getInstancias(){ //Metodos get y set de la variable instancias
+        public static int GetInstancias(){ //Metodos get y set de la variable instancias
             return Train.instancias;
         }
-        public static void setInstancias(int nueva){
+        public static void SetInstancias(int nueva){
             Train.instancias = nueva;
         }
         private string id; //Variable de instancia para identificar cada tren
-        public string getId(){ //Metodos get y set para la variable id
+        public string GetId(){ //Metodos get y set para la variable id
             return this.id;
         }
-        public void setId(string nuevaid){
+        public void SetId(string nuevaid){
             id = nuevaid;
         }
         

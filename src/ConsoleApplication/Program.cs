@@ -18,7 +18,7 @@ namespace ConsoleApplication
         {
             for (int i = 1; i <= 100;i++){
                 var j = new Train(i.ToString()); //actividad 7
-                Console.WriteLine(Train.getInstancias());
+                Console.WriteLine(Train.GetInstancias());
             }
 
             var t1 = new Train("Last Train To London");
