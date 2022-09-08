@@ -61,11 +61,11 @@ namespace ClassLibrary
             return this.IsEngineStarted;
         }
         private static int instancias = 0; //Variable de clase que cuenta la cnatidad de trenes creados
-        public int getInstancias(){ //Metodos get y set de la variable instancias
-            return instancias;
+        public static int getInstancias(){ //Metodos get y set de la variable instancias
+            return Train.instancias;
         }
-        public void setInstancias(int nueva){
-            instancias = nueva;
+        public static void setInstancias(int nueva){
+            Train.instancias = nueva;
         }
         private string id; //Variable de instancia para identificar cada tren
         public string getId(){ //Metodos get y set para la variable id
