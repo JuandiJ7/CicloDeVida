@@ -79,5 +79,14 @@ namespace ClassLibrary
             instancias--;
         }
 
+        public override string ToString()
+        {
+            return "NO IMPLEMENTADO";
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.id == ((Train)obj).id;
+        }
     }
 }            
